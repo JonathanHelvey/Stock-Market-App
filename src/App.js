@@ -12,6 +12,7 @@ class App extends React.Component {
     return (
       <div>
         <header>
+          <h1>Stock Market App!</h1>
           <p>Hellow World!</p>
         </header>
       </div>
