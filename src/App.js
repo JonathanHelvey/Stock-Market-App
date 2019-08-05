@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import "./App.css";
 import API_KEY from "./secrets";
 
-const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&apikey=${API_KEY}`;
+const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=${API_KEY}`;
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       stocks: []
+      // symbole: ""
     };
   }
 
@@ -23,12 +24,19 @@ class App extends Component {
       .catch(console.log);
   };
 
-  render() {
+  render(props) {
+    console.log(this.state.stocks);
+
+    // let stock = this.state.stocks.bestMatches.map(stock => {
+    //   return <h1>{stock}</h1>;
+    // });
+    //console.log(stock);
     return (
       <div>
         <header>
           <h1>Stock Market App!</h1>
           <p>Hellow World!</p>
+          {/* <p>{stock}</p> */}
         </header>
       </div>
     );
