@@ -1,13 +1,28 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import API_KEY from "./secrets";
 
-class App extends React.Component {
+const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&apikey=${API_KEY}`;
+
+class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      stocks: []
+    };
   }
+
+  componentDidMount = async event => {
+    // event.preventDefault();
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        this.setState({ stocks: data });
+      })
+      .catch(console.log);
+  };
+
   render() {
     return (
       <div>
