@@ -35,7 +35,7 @@ class App extends Component {
       <div>
         <header>
           <h1>Stock Market App!</h1>
-          <p>Hellow World</p>
+          <p>Hellow World!</p>
           {/* <p>{stock}</p> */}
         </header>
       </div>
