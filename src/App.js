@@ -8,8 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      stocks: []
-      // symbole: ""
+      stocks: [],
+      symbole: ""
     };
   }
 
