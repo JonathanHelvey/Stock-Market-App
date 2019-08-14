@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import "./App.css";
+import SearchBar from "./components/SearchBar";
 import API_KEY from "./secrets";
-
-const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=${API_KEY}`;
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       stocks: [],
-      symbole: ""
+      symbol: null
     };
   }
 
   componentDidMount = async event => {
     // event.preventDefault();
+    const symbol = this.state.symbol;
+    const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${API_KEY}`;
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -37,6 +38,7 @@ class App extends Component {
           <h1>Stock Market App!</h1>
           <p>Hellow World!</p>
           <button>Stocks!</button>
+          <SearchBar />
           {/* <p>{stock}</p> */}
         </header>
       </div>
