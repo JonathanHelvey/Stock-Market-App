@@ -6,7 +6,7 @@ const SearchBar = props => {
     <div>
       <form>
         <input />
-        <button>Submit</button>
+        <button onClick={props.onClick}>Submit</button>
       </form>
     </div>
   );
