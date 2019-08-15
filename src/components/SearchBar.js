@@ -1,12 +1,11 @@
 import React from "react";
 
 const SearchBar = props => {
-  console.log(`What is this`, props.symbol);
   return (
     <div>
-      <form>
-        <input />
-        <button onClick={props.onClick}>Submit</button>
+      <form onSubmit={props.getStocks}>
+        <input type="text" name="stock" placeholder="MSFT" />
+        <button>Get Stock Quote</button>
       </form>
     </div>
   );
