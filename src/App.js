@@ -17,8 +17,9 @@ class App extends Component {
 
   getStocks = async event => {
     event.preventDefault();
+    const stock = event.target.elements.stock.value;
     const term = this.state.value;
-    const url = `https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols=MSFT&apikey=${API_KEY}`;
+    const url = `https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols=${stock}&apikey=${API_KEY}`;
 
     fetch(url)
       .then(res => res.json())
