@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar";
 import API_KEY from "./secrets";
 import _ from "lodash";
 import { thisExpression } from "@babel/types";
+import StockDisplay from "./components/StocksDisplay";
 
 class App extends Component {
   constructor() {
@@ -44,6 +45,7 @@ class App extends Component {
 
   render(props) {
     console.log(`STATE`, this.state.stocks);
+    let stocks = this.state.stocks[0];
 
     return (
       <div>
@@ -51,7 +53,8 @@ class App extends Component {
           <h1>Stock Market App!</h1>
 
           <SearchBar getStocks={this.getStocks} />
-          <div>{this.state.stocks.symbol}</div>
+          <StockDisplay stockItems={this.state.stocks} />
+          {/* <div>{this.state.stocks}</div> */}
         </header>
       </div>
     );
