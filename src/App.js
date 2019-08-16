@@ -44,8 +44,11 @@ class App extends Component {
   };
 
   render(props) {
-    console.log(`STATE`, this.state.stocks);
-    let stocks = this.state.stocks[0];
+    // console.log(`STATE`, this.state.stocks);
+    let symbol = this.state.stocks.map(stock => stock.symbol);
+    let price = this.state.stocks.map(stock => stock.price);
+    let volume = this.state.stocks.map(stock => stock.volume);
+    let timestamp = this.state.stocks.map(stock => stock.timestamp);
 
     return (
       <div>
@@ -54,8 +57,14 @@ class App extends Component {
 
           <SearchBar getStocks={this.getStocks} />
           <StockDisplay stockItems={this.state.stocks} />
-          {/* <div>{this.state.stocks}</div> */}
         </header>
+        <br />
+        <div>
+          <div>Symbol: {symbol} </div>
+          <div>Price: ${parseInt(price).toFixed(2)} </div>
+          <div>Volume: {volume} </div>
+          <span>Time Stamp:{timestamp} </span>
+        </div>
       </div>
     );
   }
