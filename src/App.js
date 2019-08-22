@@ -52,7 +52,7 @@ class App extends Component {
       <div>
         <header>
           <h1>Stock Market App!</h1>
-          <p>Search a Stock See a Quote</p>
+          <p>Search for a stock and see a quote.</p>
           <SearchBar getStocks={this.getStocks} />
           <StockDisplay stockItems={this.state.stocks} />
         </header>
