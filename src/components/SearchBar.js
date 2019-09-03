@@ -1,10 +1,16 @@
 import React from "react";
+import "../components/SearchBar.css";
 
 const SearchBar = props => {
   return (
-    <div>
+    <div className="stock-form">
       <form onSubmit={props.getStocks}>
-        <input type="text" name="stock" placeholder="MSFT" />
+        <input
+          className="search-bar"
+          type="text"
+          name="stock"
+          placeholder="MSFT"
+        />
         <button>Get Stock Quote</button>
       </form>
     </div>

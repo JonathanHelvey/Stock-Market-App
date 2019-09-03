@@ -1,0 +1,12 @@
+.search-bar {
+  width: 100px;
+  border-radius: 2em;
+  /* display: flex; */
+  align-self: center;
+}
+
+.stock-form {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
