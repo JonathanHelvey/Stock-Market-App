@@ -1,5 +1,6 @@
 import React from "react";
 import StockListItem from "./StockListItem";
+import "../components/StockList.css";
 
 const StockDisplay = props => {
   console.log(`PROPS`, props.stockItems);

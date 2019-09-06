@@ -1,7 +1,8 @@
 .stockList {
   list-style-type: none;
-  /* height: 10px; */
   width: 100px;
   box-shadow: 1px;
   border: solid black;
+  padding: 20px;
+  margin: 20px;
 }
