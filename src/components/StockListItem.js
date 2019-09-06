@@ -1,8 +1,9 @@
 import React from "react";
+import "../components/StockList.css";
 
 const StockListItem = (stock, props) => {
   return (
-    <li>
+    <li className="stockList">
       <div>
         <span>Stock: </span>
         {stock.symbol}
