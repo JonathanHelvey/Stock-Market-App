@@ -3,6 +3,7 @@
   border-radius: 1em;
   /* display: flex; */
   align-self: center;
+  text-transform: uppercase;
 }
 
 .stock-form {
