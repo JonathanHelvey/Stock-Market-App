@@ -49,9 +49,16 @@ class App extends Component {
     // let volume = this.state.stocks.map(stock => stock.volume);
     // let timestamp = this.state.stocks.map(stock => stock.timestamp);
     return (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}>
         <header>
-          <h1>Stock Market App!</h1>
+          <div>
+            <h1>Stock Market App!</h1>
+          </div>
           <p>Search for a stock and see a quote!</p>
           <SearchBar getStocks={this.getStocks} />
           <StockDisplay stockItems={this.state.stocks} />

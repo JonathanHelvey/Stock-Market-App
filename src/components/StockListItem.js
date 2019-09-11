@@ -3,7 +3,7 @@ import "../components/StockList.css";
 
 const StockListItem = (stock, props) => {
   return (
-    <li className="stockList">
+    <li className="stockCard">
       <div>
         <span>Stock: </span>
         {stock.symbol}
