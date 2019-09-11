@@ -1,8 +1,18 @@
 .stockCard {
   list-style-type: none;
   width: 100px;
+  height: 150px;
   box-shadow: 1px;
   border: solid black;
   padding: 20px;
   margin: 20px;
+}
+
+.stockList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stockList :hover {
+  background-color: gainsboro;
 }

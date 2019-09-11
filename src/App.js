@@ -19,7 +19,7 @@ class App extends Component {
 
   getStocks = async event => {
     event.preventDefault();
-    const stock = event.target.stock.value;
+    const stock = event.target.stock.value.toUpperCase();
     const url = `https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols=${stock}&apikey=${API_KEY}`;
 
     fetch(url)
@@ -49,17 +49,12 @@ class App extends Component {
     // let volume = this.state.stocks.map(stock => stock.volume);
     // let timestamp = this.state.stocks.map(stock => stock.timestamp);
     return (
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center"
-        }}>
+      <div>
         <header>
           <div>
-            <h1>Stock Market App!</h1>
+            <h1 className="header">Stock Market App!</h1>
           </div>
-          <p>Search for a stock and see a quote!</p>
+          <p className="header">Search for a stock and see a quote!</p>
           <SearchBar getStocks={this.getStocks} />
           <StockDisplay stockItems={this.state.stocks} />
         </header>

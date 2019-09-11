@@ -1,6 +1,6 @@
 .search-bar {
-  width: 100px;
-  border-radius: 2em;
+  width: 150px;
+  border-radius: 1em;
   /* display: flex; */
   align-self: center;
 }
@@ -9,4 +9,15 @@
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+.button {
+  border-radius: 1em;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+}
+
+.button:hover {
+  cursor: pointer;
 }

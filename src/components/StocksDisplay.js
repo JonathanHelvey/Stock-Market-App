@@ -21,7 +21,7 @@ const StockDisplay = props => {
     );
   });
 
-  return <div>{stockItem}</div>;
+  return <div className="stockList">{stockItem}</div>;
 };
 
 export default StockDisplay;

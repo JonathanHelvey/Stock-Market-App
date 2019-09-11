@@ -11,7 +11,7 @@ const SearchBar = props => {
           name="stock"
           placeholder="MSFT"
         />
-        <button>Get Stock Quote</button>
+        <button className="button">Get Stock Quote</button>
       </form>
     </div>
   );
