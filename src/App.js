@@ -20,7 +20,7 @@ class App extends Component {
   getStocks = async event => {
     event.preventDefault();
     const stock = event.target.stock.value.toUpperCase();
-    const url = `https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols=${stock}&apikey=${API_KEY}`;
+    const url = `https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols=${stock}&apikey=${"ce1678433f23ac7e3bc8a527abe90301"}`;
 
     fetch(url)
       .then(res => res.json())
