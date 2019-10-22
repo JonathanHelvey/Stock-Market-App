@@ -1,8 +1,6 @@
 {
   "name": "stock-market-app",
-  "now": {
-    "alias": "https://stock-market-app.jonathanhelvey.now.sh/"
-  },
+  "alias": "https://stock-market-app.jonathanhelvey.now.sh/",
   "version": 2,
   "build": {
     "env": {
