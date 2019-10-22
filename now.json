@@ -1,0 +1,9 @@
+{
+  "name": "Stock-Market-App",
+  "version": 2,
+  "build": {
+    "env": {
+      "api_key": "ce1678433f23ac7e3bc8a527abe90301"
+    }
+  }
+}

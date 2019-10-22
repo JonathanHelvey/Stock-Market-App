@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
-import API_KEY from "./secrets";
+// import API_KEY from "./secrets";
 import _ from "lodash";
 import { thisExpression } from "@babel/types";
 import StockDisplay from "./components/StocksDisplay";
@@ -20,7 +20,7 @@ class App extends Component {
   getStocks = async event => {
     event.preventDefault();
     const stock = event.target.stock.value.toUpperCase();
-    const url = `https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols=${stock}&apikey=${"ce1678433f23ac7e3bc8a527abe90301"}`;
+    const url = `https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols=${stock}&apikey=${"process.env.api_key"}`;
 
     fetch(url)
       .then(res => res.json())
